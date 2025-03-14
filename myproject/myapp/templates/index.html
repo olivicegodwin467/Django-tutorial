@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal speaker</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Word speller app</h1>
+    <p>It is working fine</p>
+        <input type="text" id="input" placeholder="Enter any word computer will spell it">
+        <button id="btn" onclick="speak()">Spell it</button>
+        <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>

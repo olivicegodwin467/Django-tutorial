@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update records</title>
+</head>
+<body>
+    <h1>Add Members</h1>
+    <form action="{% url 'uprec' mem.id %}" method="post">
+        {% csrf_token %}
+        <label for="">First Name</label><br>
+        <input type="text" name="first" value="{{mem.first_name}}" placeholder="Enter first name"><br><br>
+        <label for="">Last Name</label><br>
+        <input type="text" name="last" value="{{mem.last_name}}" placeholder="Enter last_name"><br><br>
+        <label for="">Country</label><br>
+        <input type="text" name="country" value="{{mem.country}}" placeholder="Enter Country"><br>
+
+        <button type="submit" value="Add Member">Submit</button>
+    </form>
+</body>
+</html>

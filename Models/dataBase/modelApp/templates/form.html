@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new records</title>
+</head>
+<body>
+    <h1>Add Members</h1>
+    <form action="{% url 'addrec' %}" method="post">
+        {% csrf_token %}
+        <label for="">First Name</label><br>
+        <input type="text" name="first" placeholder="Enter first name"><br><br>
+        <label for="">Last Name</label><br>
+        <input type="text" name="last" placeholder="Enter last_name"><br><br>
+        <label for="">Country</label><br>
+        <input type="text" name="country" placeholder="Enter Country"><br>
+
+        <button type="submit" value="Add Member">Submit</button>
+    </form>
+</body>
+</html>
